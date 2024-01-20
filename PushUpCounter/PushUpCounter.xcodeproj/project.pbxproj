@@ -11,6 +11,8 @@
 		56A1098C2B45E65A00EB054E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A1098B2B45E65A00EB054E /* ContentView.swift */; };
 		56A1098E2B45E65C00EB054E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A1098D2B45E65C00EB054E /* Assets.xcassets */; };
 		56A109912B45E65C00EB054E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A109902B45E65C00EB054E /* Preview Assets.xcassets */; };
+		56AA09392B55B592005C9B99 /* CalenderModell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA09382B55B592005C9B99 /* CalenderModell.swift */; };
+		56AA093B2B586840005C9B99 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA093A2B586840005C9B99 /* ToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		56A1098B2B45E65A00EB054E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		56A1098D2B45E65C00EB054E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56A109902B45E65C00EB054E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56AA09382B55B592005C9B99 /* CalenderModell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderModell.swift; sourceTree = "<group>"; };
+		56AA093A2B586840005C9B99 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				56A109892B45E65A00EB054E /* PushUpCounterApp.swift */,
 				56A1098B2B45E65A00EB054E /* ContentView.swift */,
+				56AA09382B55B592005C9B99 /* CalenderModell.swift */,
+				56AA093A2B586840005C9B99 /* ToggleButton.swift */,
 				56A1098D2B45E65C00EB054E /* Assets.xcassets */,
 				56A1098F2B45E65C00EB054E /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				56A1098C2B45E65A00EB054E /* ContentView.swift in Sources */,
 				56A1098A2B45E65A00EB054E /* PushUpCounterApp.swift in Sources */,
+				56AA09392B55B592005C9B99 /* CalenderModell.swift in Sources */,
+				56AA093B2B586840005C9B99 /* ToggleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

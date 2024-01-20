@@ -7,30 +7,40 @@
 
 import SwiftUI
 
+class Zaehler: ObservableObject {
+    
+    @Published var day = 0
+    @Published var week = 0
+    @Published var month = 0
+}
+
 struct ContentView: View {
     
-    @State private var pushups = 0
-    @State private var switchColor = false
-    let randomColor: [Color] =  [.red, .blue, .green, .yellow, .mint, .black]
+    @State private var day = 0
+    @State private var week = 0
+    @State private var month = 0
     
-    let employee = Employee()
+    @State private var pushups = 0
+    let randomColor: [Color] =  [.red, .blue, .green, .yellow, .mint, .gray, .clear]
     
     var body: some View {
         VStack {
-            Text("\(employee.name)")
-            Text("Push Ups Counter")
+            
+            CalenderView(day: day, week: week, month: month)
+            
+            Text("Pushups Counter")
                 .font(.title)
                 .padding()
-            NavigationStack {
-                ZStack {
-                    Text("\(pushups)")
-                        .frame(width: 300, height: 200)
-                        .font(.largeTitle)
-                        .background(randomColor[Int.random(in: 0...5)])
-                        .cornerRadius(40)
-                        .opacity(0.3)
-                    
-                    
+            
+            ZStack {
+                Text("\(pushups)")
+                    .frame(width: 300, height: 400)
+                    .font(.largeTitle)
+                    .background(randomColor[Int.random(in: 0...5)])
+                    .cornerRadius(40)
+                    .opacity(0.3)
+                
+                VStack {
                     HStack {
                         Spacer()
                         Button(action: {
@@ -44,39 +54,28 @@ struct ContentView: View {
                         Spacer()
                         Button(action: {
                             pushups += 1
-                            switchColor = true
-                           
+                            if pushups % 10 == 0 {
+                                day += 1
+                            } else if day % 10 == 0 {
+                                week += 1
+                            } else if week % 10 == 0 {
+                                month += 1
+                            } else {
+                                month = 999
+                            }
                             
                         }, label: {
                             Image(systemName: "plus")
                         })
-                        
                         Spacer()
                     }
-                    .font(.title)
-                    
                 }
+                .font(.title)
             }
         }
     }
 }
 
-
-struct Employee {
-    var name: String
-    var yearsActive = 0
-}
-   
-    extension Employee {
-            init() {
-                self.name = "Anonymos"
-                self.yearsActive = 9
-            }
-    }
-
-let elias = Employee(name: "Elias")
-let willy = Employee(name: "Willy", yearsActive: 8)
-let anon = Employee()
 
 
 #Preview {
